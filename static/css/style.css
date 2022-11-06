@@ -1,0 +1,25 @@
+.title-font { 
+    font-size: xx-large;
+    font-family: "Optima", sans-serif;
+    text-align: center;
+}
+.news { 
+  font-size: large;
+  font-family: "Optima", sans-serif;
+}
+  *{transition:all 0.3s ease-in-out;}
+
+  .container{
+    clear:both;
+    overflow:auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+  }
+  
+  nav{float:right;}
+  .logo img{float:left;}
+
+  .logo{
+    margin-left: 40px;
+  }
