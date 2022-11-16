@@ -29,6 +29,8 @@ app.use(express.static(path.join(__dirname, "static")))
 app.use(flash());
 
 app.use(require("./routes/default"));
+app.use(require("./routes/admin-signed-out"));
+app.use(require("./routes/admin-signed-in"));
 //app.get('/', (req, res) => {
  //  res.render('home')
 //})

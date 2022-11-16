@@ -23,3 +23,18 @@
   .logo{
     margin-left: 40px;
   }
+  .form-container{
+    clear:both;
+    overflow:auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+  .jcr-row {
+    margin: 0;
+  }
+  @media (min-width: 1300px) {
+    .container {
+      max-width: 1260px;
+    }
+  }
