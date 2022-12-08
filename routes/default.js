@@ -13,19 +13,19 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", function requestHandler(req,res){
-    const {email} =  req.body;
+  const {email} =  req.body;
+  query = `INSERT INTO emails (
+      email) VALUES (?)`;
+  console.log(email);
+  queryData = [req.body.email];
+  if (email != ""){
+      connection.pool.query(query,queryData, function (err, result) {
+      if (err) throw err;
+      console.log("1 record inserted");
 
-    query = `INSERT INTO emails (
-        email) VALUES (?)`;
-    console.log(email);
-    queryData = [req.body.email];
-    connection.pool.query(query,queryData, function (err, result) {
-     if (err) throw err;
-     console.log("1 record inserted");
-
-});
-
-    res.render('home');
+      });
+  }
+  res.render('home');
 
 });
 
