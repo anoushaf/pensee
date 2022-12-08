@@ -16,10 +16,14 @@ router.post("/", function requestHandler(req,res){
     const {email} =  req.body;
 
     query = `INSERT INTO emails (
-        email) VALUES (?)`; 
+        email) VALUES (?)`;
     console.log(email);
-    queryData = [email];
-    connection.pool.query(query,email);
+    queryData = [req.body.email];
+    connection.pool.query(query,queryData, function (err, result) {
+     if (err) throw err;
+     console.log("1 record inserted");
+
+});
 
     res.render('home');
 

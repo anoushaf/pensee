@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const ADMIN_PASSWORD = "admin";
-const ADMIN_USERNAME = "pensee";
+const ADMIN_PASSWORD = "pensee";
+const ADMIN_USERNAME = "admin";
 
 router.get("/admin/login", (req, res) => {
   // Redirect to admin if there is admin in session.
